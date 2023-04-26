@@ -46,3 +46,14 @@ test('class ShoppingBasket calculate candy with discout', () => {
     expect(basket.getTotalPrice()).toEqual(4);
 
 });
+
+// below: using mock object instead of //Candy class to isolate //Shopping basket during tests
+
+test('class Shopping basket adding 2 items and returning total price', () => {
+    const basket = new ShoppingBasket();
+    const candy = { getName: () => 'Mars', getPrice: () => 4.99};
+    const candy2 = { getName: () => 'Snickers', getPrice: () => 3.99};
+    basket.addItem(candy);
+    basket.addItem(candy2);
+    expect(basket.getTotalPrice()).toEqual(8.98);
+});
