@@ -9,15 +9,15 @@ getTemperature() {
     return this.temperature;
 }
 
-up(amount = 1) {
+up() {
     if (this.temperature < this.maxTemp) {
-return this.temperature += amount; // increases temperature by 1
+return this.temperature ++; // increases temperature by 1
     }
 }
 
-down(amount = 1) {
+down() {
     if (this.temperature > this.minTemp) {
-    this.temperature -= amount; // decreses temperature by 1
+    this.temperature --; // decreses temperature by 1
 }
 }
 
