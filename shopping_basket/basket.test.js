@@ -36,3 +36,13 @@ test('class ShoppingBasket should return the total price of 2 different added it
     basket.addItem(candy2);
     expect(basket.getTotalPrice()).toEqual(8.98)
 });
+
+test('class ShoppingBasket calculate candy with discout', () => {
+    const basket = new ShoppingBasket();
+    const candy = new Candy('Mars', 5);
+    basket.addItem(candy);
+    basket.applyDiscount(0.2)
+    
+    expect(basket.getTotalPrice()).toEqual(4);
+
+});
