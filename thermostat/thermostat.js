@@ -6,6 +6,12 @@ constructor() {
 getTemperature() {
     return this.temperature
 }
+
+up(amount = 1) {
+this.temperature += amount; // increases temperature by 1
+}
+
+
 };
 
 module.exports = Thermostat;
