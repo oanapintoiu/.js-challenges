@@ -12,5 +12,5 @@ test("adds pikachu to pokedex", async () => {
     const pokemon1 = await pokedex.catch('pikachu'); 
     const pokemon2 = await pokedex.catch('jigglypuff'); 
     expect(pokedex.pokemonArray.length).toBe(2);
-    
+    expect(pokedex.all().length).toBe(2);
 });

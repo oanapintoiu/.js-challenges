@@ -10,7 +10,9 @@ this.pokemonArray = [];
     this.pokemonArray.push(data);              // the fetched data is then passed on to the pokemon parameter.
    } 
 
-   
+   all() {
+    return this.pokemonArray;
+   };
 
 
 };
