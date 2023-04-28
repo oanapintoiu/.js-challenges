@@ -90,5 +90,9 @@ lerna-debug.log
 .DS_Store
 Thumbs.db
 
+#remove these specific files
 /weather_client/apiKey.js
 apiKey.js
+
+#keep md files
+!*.md
