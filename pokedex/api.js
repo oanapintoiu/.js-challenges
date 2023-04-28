@@ -3,7 +3,7 @@
 const fetchPokemon = (pokemon) => {
     return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     .then((response) => response.json())
-    .then((data) => console.log({
+    .then((data) => ({
         name: data.name,
         id: data.id, 
         height: data.height,
@@ -13,7 +13,7 @@ const fetchPokemon = (pokemon) => {
     }));
 };
 
-fetchPokemon('pikachu')
+// fetchPokemon('pikachu') 
   
 module.exports = fetchPokemon;
 
